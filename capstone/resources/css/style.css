@@ -1,0 +1,553 @@
+/* universal ---------------------*/
+
+html {
+  font-size: 16px;
+  margin: 0 auto;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  color: #4d4d4d;
+}
+
+
+/* only a margin of 24px (desktop) / 16px (mobile) on the sides */
+
+.supportingSides {
+  margin: auto 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: Dimgray;
+}
+
+main {
+  position: relative;
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+}
+
+.image-container video {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* header ------------------------*/
+
+header {
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  width: 100%;
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 780px) {
+  header .desktop {
+    display: none;
+  }
+  header .mobile {
+    display: flex;
+    width: 100%;
+  }
+  header .mobile ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+  }
+  .mobile ul li a {
+    display: flex;
+  }
+  header .mobile img {
+    height: 2.5rem;
+  }
+}
+
+
+/* end media query ----- */
+
+header .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+}
+
+header .logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 2.75rem;
+  width: auto;
+}
+
+#academyTitle {
+  font-family: "Lucida Grande", sans-serif;
+  color: #a6a6a6;
+  font-size: 1.5rem;
+  letter-spacing: 0.05rem;
+}
+
+@media only screen and (max-width: 780px) {
+  #academyTitle {
+    display: none;
+  }
+  header .logo {
+    display: none;
+  }
+}
+
+#colmar {
+  font-weight: bold;
+  color: #4d4d4d;
+}
+
+#academy {
+  font-weight: lighter;
+}
+
+header nav ul {
+  display: flex;
+}
+
+nav ul li {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.desktop li a {
+  padding: 0.75rem 0.75rem;
+  border-radius: 1rem;
+  transition: all 0.2s ease-out 100ms;
+}
+
+.desktop li a:hover {
+  background-color: #F0F0F0;
+}
+
+
+/* banner -------------------------------*/
+
+.jumbotron {
+  display: flex;
+}
+
+.bufferZone {
+  display: none;
+}
+
+@media only screen and (max-width: 780px) {
+  .jumbotron {
+    flex-direction: column;
+    width: auto;
+  }
+  .articleSection .leftBox {
+    display: none;
+  }
+  .bufferZone {
+    display: block;
+    height: 180px;
+    background-color: DarkGray;
+  }
+  .leftBox .desktop {
+    display: none;
+  }
+}
+
+#dark {
+  background-color: #F0F0F0;
+}
+
+#light {
+  background-color: White;
+}
+
+
+/* adjusts width for the banner image + the image of the first readMore article */
+
+.leftBox .image-container {
+  max-width: 100%;
+  padding: 2rem 1.5rem;
+}
+
+
+/* handles the left part of the banner and the readMore sections (image + text) */
+
+.leftBox {
+  width: 60%;
+  height: auto;
+}
+
+.rightBox {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1rem;
+  font-family: "Tahoma", sans-serif;
+}
+
+#rightBoxBanner h1, #rightBoxBanner p {
+  padding-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.rightBox h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  line-height: 1.25;
+}
+
+.rightBox p {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin-bottom: 2.5rem;
+}
+
+#button {
+  width: 80%;
+  padding: 1rem 0;
+  background-color: Dimgray;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 200ms ease-out;
+  border: 0.5px solid transparent;
+}
+
+#button:hover {
+  background-color: transparent;
+  color: #4d4d4d;
+  border: 0.5px solid DarkGray;
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width:780px) {
+  #rightBoxBanner {
+    width: auto;
+    padding: 2rem 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  #rightBoxBanner .rightBox {
+    display: flex;
+    justify-content: center;
+  }
+  #rightBoxBanner h1 {
+    padding: 0;
+    font-size: 2rem;
+  }
+  #rightBoxBanner p {
+    padding: 2rem 0 1.5rem 0;
+  }
+  .rightBox h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .rightBox p {
+    margin: 0;
+    margin-bottom: 0;
+  }
+  #button {
+    width: auto;
+    transition: none;
+  }
+
+}
+
+
+/*readMore Article Section --------------*/
+
+.leftBox .content {
+  padding: 0 1.5rem;
+}
+
+.leftBox h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.leftBox h4 {
+  font-size: 0.80rem;
+  margin-bottom: 1rem;
+}
+
+.leftBox p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+#rightBoxArticles {
+  border-left: 0.5px solid LightGray;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  width: 40%;
+}
+
+.rightBox .image-container {
+  max-width: 33%;
+}
+
+.rightBox h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.rightBox span {
+  font-size: 0.75rem;
+  font-weight: 100;
+  line-height: 1.4;
+  color: #909090;
+}
+
+.rightBox #link {
+  color: #4a90e2;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 1rem;
+  transition: all 200ms ease-out 100ms;
+}
+
+.article .mobile {
+  display: none;
+}
+
+.article:hover {
+  background-color: #F0F0F0;
+}
+
+.article.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem 1rem;
+}
+
+@media only screen and (max-width:780px) {
+  #rightBoxArticles {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .article .desktop {
+    display: none;
+  }
+  .article .mobile {
+    display: block;
+  }
+  .article {
+    display: flex;
+    flex-direction: column;
+  }
+  .rightBox .image-container {
+    max-width: 100%;
+  }
+  .rightBox h2 {
+    font-size: 1.4rem;
+  }
+  .rightBox span {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
+  .article {
+    padding: 0.5rem 1rem;
+  }
+  .article .content {
+    padding: 1rem 1rem 0.25rem 1rem;
+  }
+}
+
+
+/* course grid -----------------------------*/
+
+.grid h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  font-weight: 600;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.gridCourse {
+  margin: 0.5rem 1rem;
+  height: 47%;
+  width: 25%;
+  background-color: white;
+  transition: all 150ms ease-out 100ms;
+}
+
+.gridCourse:hover {
+  transform: scale(1.1);
+}
+
+.gridCourseDescription {
+  padding: 0.5rem 1rem;
+}
+
+.gridCourseDescription h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  letter-spacing: 0.03rem;
+}
+
+.gridCourseDescription #courses {
+  padding: 1rem 0.5rem;
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+.gridCourseDescription p {
+  font-weight: 100;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.grid .mobile {
+  display: none;
+}
+
+@media only screen and (max-width:780px) {
+  .grid.desktop {
+    display: none;
+  }
+  .grid h2 {
+    padding: 2rem 0 1rem 0;
+  }
+  .grid.mobile {
+    display: flex;
+    width: 100%;
+  }
+  .grid.mobile ul {
+    width: 100%;
+  }
+  .grid.mobile ul li {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid.mobile ul li:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  .grid.mobile h3 {
+    background-color: Gainsboro;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    margin
+  }
+}
+
+
+/* thesis exhibit section -------------------*/
+
+.universalBanner {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 4rem 0 2rem 0;
+  width: 100%;
+  font-weight: 600;
+}
+
+.thesis#rightBoxArticles {
+  justify-content: flex-start;
+  border: none;
+}
+
+.leftBox h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.thesis .content {
+  padding-right: 2rem;
+  justify-content: center;
+}
+
+@media only screen and (max-width:780px) {
+  .universalBanner {
+    padding: 2rem 0 0 0;
+  }
+  .leftBox.thesis {
+    width: 100%;
+    height: auto;
+  }
+  .thesis .content {
+    display: none;
+  }
+  .thesis#rightBoxArticles {
+    display: none;
+  }
+}
+
+
+/* footer -------------------------------------*/
+
+footer {
+  margin-top: 2rem;
+  height: 4rem;
+  border-top: 0.5px solid #F0F0F0;
+}
+
+footer .legal {
+  font-size: 0.75rem;
+  font-weight: 100;
+  align-self: center;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.legal ul li {
+  display: inline;
+  padding-left: 0.5rem;
+}
+
+@media only screen and (max-width: 780px) {
+  .legal ul {
+    display: none;
+  }
+  footer .legal {
+    justify-content: center;
+  }
+}
